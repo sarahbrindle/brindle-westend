@@ -1,0 +1,10 @@
+.wp-block[data-type="generateblocks/container"]{
+	margin-bottom: 20px;
+}
+.wp-block[data-type="generateblocks/container"]:not(.is-selected) {
+    border: 1px dashed #555;
+}
+
+.block-editor-block-list__block .wp-block-columns .wp-block-column{
+	 border: 1px dashed #555;
+}
