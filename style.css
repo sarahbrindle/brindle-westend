@@ -6,9 +6,9 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-hexley
 GitHub Branch:    master
-Version: v1.0.0
+Version: v1.0.1
 Template:		 generatepress
-Date:            20-07-2022
+Date:            10-08-2022
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -16,3 +16,706 @@ License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:	 brindle-westend
 */
+@import url("assets/css/neighborhood.css");
+
+@font-face {
+    font-family: 'Quincy CF';
+    src: url('assets/fonts/QuincyCF-Regular.eot');
+    src: url('assets/fonts/QuincyCF-Regular.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/QuincyCF-Regular.woff2') format('woff2'),
+        url('assets/fonts/QuincyCF-Regular.woff') format('woff'),
+        url('assets/fonts/QuincyCF-Regular.ttf') format('truetype'),
+        url('assets/fonts/QuincyCF-Regular.svg#QuincyCF-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ==========================================================================
+   General
+   ========================================================================== */
+body {
+    word-wrap: break-word;
+}
+
+.generatepress-body-wrapper {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+
+.pd-top-md {}
+
+.pd-btm-md {}
+
+.mr-btm-md {
+    margin-bottom: 86px;
+}
+
+
+.button,
+.wp-block-button .wp-block-button__link,
+.gform_wrapper.gravity-theme #field_submit input,
+.gform_wrapper.gravity-theme .gform_footer input {
+    padding: 13px 20px;
+    /*border: solid 1px var(--contrast-2);*/
+    border: solid 1px;
+    letter-spacing: 1.5px;
+    min-width: 170px;
+}
+
+.gform_wrapper.gravity-theme #field_submit input,
+.gform_wrapper.gravity-theme .gform_footer input {
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+}
+
+.gform_wrapper.gravity-theme #field_submit input:hover,
+.gform_wrapper.gravity-theme .gform_footer input:hover {
+    /* border-color: var(--contrast-2);*/
+}
+
+.wp-block-image img {
+    display: block;
+}
+
+.gb-container .gb-grid-wrapper .wp-block-image {
+    margin-bottom: 30px;
+}
+
+
+.overflow-visible {
+    overflow: visible !important;
+}
+
+body h6 {
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+/* ==========================================================================
+   content
+   ========================================================================== */
+.home-banner.gb-container:before {
+    left: 25%;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.30);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.30);
+}
+
+.home-baner-content {
+    background-color: rgba(255, 255, 255, .6);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    padding: 35px 60px 50px 55px;
+}
+
+.home-baner-content .wp-block-buttons {
+    gap: 55px;
+}
+
+.top-bar .gb-button-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 60px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.site-logo a {
+    display: block;
+    max-width: 199px;
+    width: 100%;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.site-header.scroll-to-fixed-fixed .site-logo a {
+    max-width: 160px;
+}
+
+body header.site-header {
+    -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
+}
+
+.gb-container.gb-left-0 > div {
+    padding-right: calc((100vw - 1160px) / 2);
+}
+
+.gb-container.gb-right-0 > div {
+    padding-left: calc((100vw - 1160px) / 2);
+}
+
+.gb-container.ratio-741-619 {
+    aspect-ratio: 741/619;
+}
+
+.gb-container.ratio-779-632 {
+    aspect-ratio: 779/632;
+}
+
+.gb-container.right-striped,
+.gb-container.left-striped {
+    position: relative;
+}
+
+.gb-container.right-striped::before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    border-left: 14px solid #FFF;
+    border-right: 7px solid var(--contrast-2);
+    z-index: 9;
+}
+
+.gb-container.left-striped::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    border-left: 7px solid var(--contrast-2);
+    border-right: 14px solid #FFF;
+    z-index: 9;
+}
+
+body .footer-widgets .widget {
+    margin-bottom: 15px;
+}
+
+body .footer-widgets .widget-title {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #FFF;
+    white-space: nowrap;
+}
+
+body .footer-widgets #menu-footer-menu {
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+
+body .footer-widgets {
+    line-height: 2.15;
+    white-space: nowrap;
+}
+
+body .widget ul li {
+    margin-bottom: 0;
+}
+
+body .site-footer .footer-widgets-container .inside-footer-widgets {
+    margin-left: 0;
+    gap: 40px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+body .inside-footer-widgets > div {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 0px;
+    flex: 0 0 0;
+}
+
+body .site-footer .footer-widgets-container .inner-padding {
+    padding: 0 0 0 0;
+}
+
+body .site-footer .wp-container-6 {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+body .site-info {
+    opacity: .43;
+}
+
+body .site-info .copyright-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 23px;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+body .site-info figure.wp-block-image {
+    margin-bottom: 0;
+}
+
+body .wp-block-eedee-block-gutenslider .swiper-pagination-bullet {
+    background: #EEEBE5;
+}
+
+body .wp-block-eedee-block-gutenslider .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+    border-radius: 12px;
+    opacity: 1;
+}
+
+body .wp-block-eedee-block-gutenslider .wp-block-eedee-block-gutenslide.is-position-center-center .slide-content p {
+    margin-bottom: 40px;
+}
+
+body .wp-block-eedee-block-gutenslider .swiper {
+    padding-bottom: 20px;
+}
+
+body .wp-block-eedee-block-gutenslider .wp-block-eedee-block-gutenslide.is-position-center-center .slide-content {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+body input[type="text"],
+body input[type="email"],
+body input[type="url"],
+body input[type="password"],
+body input[type="search"],
+body input[type="tel"],
+body input[type="number"],
+body textarea,
+body select {
+    border-radius: 3px;
+}
+
+body input[type="text"],
+body input[type="email"],
+body input[type="url"],
+body input[type="password"],
+body input[type="search"],
+body input[type="tel"],
+body input[type="number"],
+body select {
+    height: 53px;
+}
+
+body .gform_wrapper.gravity-theme .gfield textarea.medium {
+    height: 139px;
+    resize: none;
+}
+
+body .wp-container-5.wp-block-social-links,
+body body .inside-footer-widgets .footer-widget-4 ul body,
+body .inside-footer-widgets .footer-widget-4 ul.wp-block-social-links {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+body .gb-headline.hero-title-inner {
+    position: relative;
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+body .main-navigation .main-nav ul li a {
+    letter-spacing: 1px;
+}
+
+body .main-navigation .main-nav ul li:last-child a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+
+body .top-bar .gb-button-wrapper .gb-button {
+    letter-spacing: 1.5px;
+}
+
+body .neighborhood-b .map-a__body {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+body .neighborhood-b__poi {
+    background-color: #FFF !important;
+    /*Map items bg color*/
+}
+
+body .map-a__cat-selected {
+    background-color: var(--contrast-2) !important;
+}
+
+body .neighborhood-b__poi-category-item-title .tab-grid * {
+    color: rgb(62, 72, 73) !important;
+}
+
+body .neighborhood-b__poi-category-item-title .tab-grid p {
+    text-transform: capitalize;
+}
+
+body .neighborhood-b__poi-category-item-title .tab-grid h4 {
+    letter-spacing: 1.24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(62, 72, 73) !important;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+body .neighborhood-b__poi-category-list-item,
+body .neighborhood-b__poi-category-list-item {
+    border-bottom: 1px solid #6BA292 !important;
+    margin-right: 15px;
+}
+
+body .map-a__cat-link-column {
+    font-family: "Quincy CF" !important;
+    text-transform: capitalize;
+}
+
+body .amenity-c__group-container,
+body .gallery-c__container,
+body .neighborhood-a__poi-container,
+body .neighborhood-b__poi-container,
+body .floorplan-building,
+body .floorplan-details-a__container,
+body .floorplan-details-b__container,
+body .floorplan-details-c__container,
+body .floorplan-result-message__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+body .map-a__cat-select-label {
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+body .neighborhood-b__poi-category-header {
+    display: none;
+}
+
+body .floorplangrid .buttons > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+body .floorplangrid a.button {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    /*background-color: #FFF !important;
+    border: 1px solid #707070 !important;*/
+    border: 1px solid !important;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    /*color: #305A51 !important;*/
+    white-space: nowrap;
+    letter-spacing: 1.2px;
+    border-radius: 0 !important;
+    min-width: 100px;
+}
+
+body .floorplangrid .filters {
+    margin-bottom: 70px;
+}
+
+body .floorplangrid-wrap {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+body .floorplangrid-wrap > div {
+    position: relative;
+    z-index: 5;
+    background-color: #FFF;
+    -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, .20);
+    box-shadow: 0 0 24px rgba(0, 0, 0, .20);
+    padding: 25px 20px;
+}
+
+body .floorplangrid-wrap::before {
+    content: "";
+    position: absolute;
+    left: -300vw;
+    right: -300vw;
+    top: 0;
+    bottom: 0;
+    background-color: #E4E4E4;
+    z-index: 1;
+}
+
+body .floorplangrid .filters a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    font-size: 12px;
+    white-space: nowrap;
+    min-width: 170px;
+    text-transform: uppercase;
+    border-radius: 0 !important;
+    letter-spacing: 1.2px;
+    border: 1px solid transparent;
+    height: 46px;
+    /*background-color: #305A51;
+    color: #FFF;*/
+}
+
+body .floorplangrid .filters a.active,
+body .floorplangrid .filters a:hover,
+body .floorplangrid a.button:hover {
+    /*border-color: #305A51;
+    background-color: #FFF;
+    color: #305A51;*/
+}
+
+body .floorplangrid .floorplan-images-wrap .floorplan-slide > a {
+    display: block;
+    height: 214px;
+}
+
+body .floorplangrid .floorplan-slider .slick-arrow.slick-next {
+    right: -20px;
+}
+
+body .floorplangrid .floorplan-slider .slick-arrow.slick-prev {
+    left: -20px;
+}
+
+body .floorplangrid .floorplan-slider .slick-arrow {
+    width: 22px;
+    height: 22px;
+    border-radius: 30px;
+    border: 1px solid #6FB7A9;
+    color: transparent;
+    background-color: #FFF;
+}
+
+body .floorplangrid .floorplan-slider .slick-arrow::before {
+    color: #6FB7A9;
+    font-size: 16px;
+}
+
+body .generatepress-body-wrapper button#category-select-link .map-a__cat-link-column {
+    color: #FFF !important;
+}
+.parallax {
+    overflow-y: hidden;
+}
+
+@media(min-width:1201px) {
+    body .main-navigation .main-nav ul li:last-child {
+        margin-left: 190px;
+    }
+
+    body .main-navigation .main-nav ul li:last-child a {
+        min-width: 169px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+@media(min-width:992px) {
+
+    body .main-navigation .main-nav ul li:last-child a:hover,
+    body .main-navigation .main-nav ul li:last-child a:focus {
+        border-color: var(--contrast-2);
+    }
+}
+
+@media (max-width:1200px) {
+    body .map-a__cat-link-table {
+        height: 36px;
+    }
+
+    body .map-a__cat-link-column {
+        font-size: 18px;
+        line-height: 1.1;
+    }
+
+    body .neighborhood-b__poi-category-list {
+        gap: 30px;
+    }
+
+    body .neighborhood-b__poi-category-list-item {}
+}
+
+@media(min-width:992px) and (max-width:1200px) {
+    body .main-navigation .main-nav ul li:last-child {
+        margin-left: 40px;
+    }
+
+    body .main-navigation .main-nav ul li:last-child a {
+        min-width: 170px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    body .main-navigation .main-nav ul li:last-child a:hover,
+    body .main-navigation .main-nav ul li:last-child a:focus {
+        border-color: var(--contrast-2);
+    }
+}
+
+@media(max-width:991px) {
+    body .main-navigation .main-nav ul li:last-child a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .top-bar .gb-button-wrapper {
+        gap: 10px;
+    }
+
+    body .menu-toggle {
+        font-size: 30px;
+    }
+
+    .home-baner-content .wp-block-buttons {
+        gap: 20px;
+    }
+
+    body .site-footer .footer-widgets-container .inside-footer-widgets {
+        gap: 25px;
+    }
+
+    body .footer-widgets #menu-footer-menu {
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media(max-width:980px) {
+    body .generatepress-body-wrapper .map-a__cat-selected {
+        padding: 0 20px 0 20px;
+    }
+
+    body .generatepress-body-wrapper .map-a__cat-selected {
+        background-size: 16px;
+    }
+}
+
+@media(max-width:768px) {
+    body .inside-top-bar {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    body .top-bar .inside-top-bar > .widget {
+        margin: 0 0 0 0;
+    }
+
+    .site-logo a {
+        max-width: 150px;
+    }
+
+    .site-header.scroll-to-fixed-fixed .site-logo a {
+        max-width: 120px;
+    }
+
+    body .site-info .copyright-bar {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    body .footer-widgets .widget-title {
+        text-align: center;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body .site-footer .footer-widgets-container .inside-footer-widgets {
+        text-align: center;
+    }
+
+    body .wp-container-5.wp-block-social-links,
+    body body .inside-footer-widgets .footer-widget-4 ul body,
+    body .inside-footer-widgets .footer-widget-4 ul.wp-block-social-links {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    body .inside-footer-widgets > div .gb-button-wrapper {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    body .floorplangrid .buttons > div {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+}
+
+
+@media(max-width:576px) {
+    body .top-bar .gb-button .gb-button-text {
+        font-size: 9px;
+    }
+}

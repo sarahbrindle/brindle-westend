@@ -105,7 +105,7 @@
     $mapLatitudeCenter = $latitudePin;
     $mapLongitudeCenter = $longitudePin;
     $mapZoom = get_field('zoom_for_map', 'option');
-    $mapDefaultCategory = 6;
+    $mapDefaultCategory = get_field('default_category', 'option');//11;
     /*end pin*/
 
 
@@ -319,7 +319,7 @@
                 ?>
 
 
-             <div <?php if($catNumber != 6){ ?> style="display:none;" <?php }?> class="neighborhood-b__poi " data-js-hook="poi-category" data-category="<?php echo $catNumber;?>" >
+             <div <?php if($catNumber != $mapDefaultCategory){ ?> style="display:none;" <?php }?> class="neighborhood-b__poi " data-js-hook="poi-category" data-category="<?php echo $catNumber;?>" >
           <div class="neighborhood-b__poi-container">
             <div class="neighborhood-b__poi-category-header">
               <div class="neighborhood-b__poi-category-header-container">               

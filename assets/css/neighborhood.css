@@ -1,0 +1,199 @@
+.gb-container.neighborhood-container ul.resp-tabs-list {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    /*background-color: #FFF;*/
+}
+
+.gb-container.neighborhood-container ul.resp-tabs-list li {
+    padding: 0 40px;
+    height: 70px;
+    line-height: 70px;
+}
+
+.gb-container.neighborhood-container ul.resp-tabs-list li + li::before {
+    content: "";
+    height: 38px;
+    width: 2px;
+    /*background-color: var(--contrast);*/
+    display: inline-block;
+    -webkit-transform: translate(-20px, 10px);
+    transform: translate(-40px, 10px);
+}
+
+.gb-container.neighborhood-container .resp-tabs-container .resp-tab-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.gb-container.neighborhood-container .resp-tabs-container .tab-grid {
+    margin-bottom: 0;
+}
+
+.gb-container.neighborhood-container .resp-tabs-container .tab-grid {
+    position: relative;
+}
+
+.gb-container.neighborhood-container .resp-tabs-container .tab-grid::before {
+    content: "";
+    width: 100%;
+    max-width: 156px;
+    border-bottom: 1px solid;
+
+    /*border-bottom: 1px solid #94BBBE;*/
+    display: block;
+}
+
+.gb-container.neighborhood-container .resp-tabs-container .tab-grid:nth-child(-n+3)::before {
+    display: none;
+}
+
+.gb-container.neighborhood-container .resp-tabs-container .tab-grid a {
+    padding: 25px 0;
+}
+
+.gb-container.neighborhood-container .resp-tabs-container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.gb-container.neighborhood-container .tab-grid h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.gb-container.neighborhood-container ul.resp-tabs-list li.resp-tab-active + li::before {
+    display: none;
+}
+
+.gb-container.neighborhood-container .tab-grid a {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+body .neighborhood-b__poi-category-item-title .tab-grid {
+    max-width: 100%;
+    margin-bottom: 0;
+    text-align: left;
+    padding: 0;
+}
+
+body .neighborhood-b__poi-category-item-title {
+    font-size: 14px;
+    /*color: #FFF;*/
+    font-weight: 400;
+}
+
+body .neighborhood-b__poi-category-list-item {
+    list-style: none;
+    border-bottom: 1px solid;
+    text-align: left;
+    width: 100%;
+    max-width: 210px;
+    height: 100%;
+    padding-bottom: 20px;
+    min-height: 120px;
+}
+
+body .neighborhood-b__poi-category-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 100px;
+    height: 100%;
+    -webkit-column-gap: 80px;
+    column-gap: 80px;
+    row-gap: 30px;
+}
+
+body .neighborhood-b__poi-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+body .neighborhood-b__poi {
+    /* background-color: var(--contrast);*/
+}
+
+body .neighborhood-b__poi-category-list-item:nth-child(-n+3) {
+    border-top: 0;
+}
+
+body .map-a__cat-link-column {
+    font-size: 24px;
+    font-weight: 400;
+    /* color: var(--contrast);*/
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+body .map__infobox-poi-address-header {
+    font-size: 16px;
+    /*color: var(--contrast-2);*/
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+body .map__infobox-poi-address {
+    font-size: 14px;
+    /* color: var(--accent);*/
+}
+
+body .map__infobox-poi-link {
+    font-size: 14px;
+    /* color: var(--contrast);*/
+}
+
+/*------------Vertical Tab ---------------*/
+
+/*----map---*/
+.neighborhood-container-without-info-box {
+    display: none;
+}
+
+
+.neighborhood-b__poi-category-item-link:hover,
+.neighborhood-b__poi-category-item-link--active,
+.neighborhood-b__poi-category-item-link:focus {
+    background: none !important;
+}
+
+body .main-navigation .main-nav ul.sub-menu li:last-child a {
+    /*background-color: transparent;
+    color: var(--base-2);*/
+}
+
+body .main-navigation .main-nav ul.sub-menu li:last-child a:hover {
+    /* background-color: var(--contrast-3);
+    color: #FFF;*/
+}
+
+/*
+@media(max-width:91px) {
+    .neighborhood-container-without-info-box{
+        display: block;
+    }
+    .neighborhood-container-with-info-box{
+        display: none;
+    }
+}*/
+/*-- endmap---*/

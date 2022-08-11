@@ -106,13 +106,13 @@ function tu_add_google_fonts( $fonts ) {
     
     return $fonts;
 }
-/*
+
 add_filter( 'generate_typography_default_fonts', function( $fonts ) {
-    $fonts[] = 'Rift Soft Demi';
+    $fonts[] = 'Quincy CF';
 
     return $fonts;
 } );
-*/
+
 if( function_exists('acf_add_options_page') ) {
     
     acf_add_options_page();
