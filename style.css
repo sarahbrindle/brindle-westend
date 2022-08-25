@@ -6,9 +6,9 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-hexley
 GitHub Branch:    master
-Version: v1.0.1
+Version: v1.0.3
 Template:		 generatepress
-Date:            10-08-2022
+Date:            25-08-2022
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -489,7 +489,7 @@ body .floorplangrid-wrap::before {
     right: -300vw;
     top: 0;
     bottom: 0;
-   /* background-color: #E4E4E4;*/
+    /* background-color: #E4E4E4;*/
     z-index: 1;
 }
 
@@ -555,14 +555,56 @@ body .floorplangrid .floorplan-slider .slick-arrow::before {
 body .generatepress-body-wrapper button#category-select-link .map-a__cat-link-column {
     color: #FFF !important;
 }
+
 .parallax {
     overflow-y: hidden;
 }
+
 .top-bar-align-right .widget:first-child {
-  margin-left: 60px !important;
+    margin-left: 60px !important;
 }
+
 .top-bar .inside-top-bar {
-  justify-content: flex-end;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+body .top-bar select.notranslate {
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+    letter-spacing: 1.5px;
+    padding-left: 20px;
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 13.5'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23305a51;%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M1.33,1.32V8.16l1.18-.92H10V1.32ZM0,10.87H0V.66A.67.67,0,0,1,.67,0h10a.67.67,0,0,1,.66.66v7.9H3L0,10.87ZM14,13.5h0l-3-2.3H5.33a.67.67,0,0,1-.66-.66V9.88h6.82l1.18.91V4h.66a.67.67,0,0,1,.67.66V13.5Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat no-repeat;
+    background-position: left center;
+    background-size: 15px;
+    border: 0;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-width: 150px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+body .vp-filter__style-default .vp-filter__item a {
+    padding: 13px 20px;
+    border: 1px solid transparent;
+    letter-spacing: 1.5px;
+    min-width: 170px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 0;
+}
+
+body .vp-filter__style-default .vp-filter__item a:hover, body .vp-filter__style-default .vp-filter__item.vp-filter__item-active > * {
+    /*border-color: var(--contrast-2);*/
 }
 
 @media(min-width:1201px) {
@@ -623,8 +665,9 @@ body .generatepress-body-wrapper button#category-select-link .map-a__cat-link-co
 
 @media(max-width:991px) {
     .top-bar-align-right .widget:first-child {
-  margin-left: 10px !important;
-}
+        margin-left: 10px !important;
+    }
+
     body .main-navigation .main-nav ul li:last-child a {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -665,13 +708,20 @@ body .generatepress-body-wrapper button#category-select-link .map-a__cat-link-co
 
 @media(max-width:768px) {
     .top-bar .inside-top-bar {
-      justify-content: center;
-      flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
     }
+
     .top-bar-align-right .widget:first-child {
-      margin-left: 0px !important;
-      margin-bottom: 5px !important;
+        margin-left: 0px !important;
+        margin-bottom: 5px !important;
     }
+
     body .inside-top-bar {
         padding-right: 20px;
         padding-left: 20px;
