@@ -606,7 +606,9 @@ body .vp-filter__style-default .vp-filter__item a {
 body .vp-filter__style-default .vp-filter__item a:hover, body .vp-filter__style-default .vp-filter__item.vp-filter__item-active > * {
     /*border-color: var(--contrast-2);*/
 }
-
+.ghimg img{
+    height:27px !important;
+}
 @media(min-width:1201px) {
     body .main-navigation .main-nav ul li:last-child {
         margin-left: 190px;
