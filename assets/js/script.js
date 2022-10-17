@@ -1,6 +1,7 @@
-jQuery(document).ready(function() {
+/*jQuery(document).ready(function() {
   jQuery('#masthead').scrollToFixed();
 });
+*/
 
 jQuery( document ).ready( function( $ ) {
     $( '.close-bar' ).on( 'click', function( e ) {
@@ -9,6 +10,21 @@ jQuery( document ).ready( function( $ ) {
         $( 'body' ).css( 'transformY', '-145px' ); /* height of top bar */
     } );
 } );
+/*
+jQuery(document).ready(function($) {
+  $('.site-header').scrollToFixed();
+});
+*/
+
+
+jQuery(window).scroll(function($){
+  var sticky = jQuery('.site-header'),
+      scroll = jQuery(window).scrollTop();
+
+  if (scroll >= 2) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
+});
+
 
 jQuery( document ).ready( function( $ ) {
     $( ".full-list" ).each(function( i ) {         
@@ -23,6 +39,10 @@ jQuery( document ).ready( function( $ ) {
     } );
 } );
 
+
+jQuery( document ).ready(function() {
+  //jQuery('#masthead').scrollToFixed();
+});
 
 jQuery( document ).ready( function( $ ) {
     //alert('hi');
@@ -51,9 +71,7 @@ jQuery( document ).ready( function( $ ) {
         fixedContentPos: false
     });
 });
-
-
-
+/*
 window.addEventListener('scroll', throttle(parallax, 14));
 
 function throttle(fn, wait) {
@@ -69,7 +87,10 @@ function throttle(fn, wait) {
 function parallax() {
   var scrolled = window.pageYOffset;
   var parallax = document.querySelector(".parallax");
-  // You can adjust the 0.4 to change the speed
-    var coords = (scrolled * 0.4) + 'px'
-  parallax.style.transform = 'translateY(' + coords + ')';
-};
+  if (typeof(parallax) != 'undefined' && parallax != null)
+    {
+      // You can adjust the 0.4 to change the speed
+        var coords = (scrolled * 0.4) + 'px'
+      parallax.style.transform = 'translateY(' + coords + ')';
+    }
+};*/

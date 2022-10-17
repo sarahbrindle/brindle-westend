@@ -194,6 +194,7 @@
 			$css->set_selector( '.vp-filter__item.vp-filter__item-active a,.vp-filteritem a:hover, .vp-filter_item a:focus,.vp-filter__item a:hover' );
 			$css->add_property( 'background-color', $generate_settings['form_button_background_color_hover'].'!important' );
 			$css->add_property( 'color', $generate_settings['form_button_text_color_hover'].'!important' );
+			$css->add_property( 'border-color', $generate_settings['form_button_background_color'].'!important' );
 
 
 			/*Floor Plan Filter*/

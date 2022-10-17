@@ -6,9 +6,9 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-hexley
 GitHub Branch:    master
-Version: v1.0.3
+Version: v1.0.4
 Template:		 generatepress
-Date:            25-08-2022
+Date:            17-10-2022
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -31,6 +31,23 @@ Text Domain:	 brindle-westend
     font-display: swap;
 }
 
+body { margin: 0; }
+
+.site-header { /*background: orange;*/ }
+
+.fixed {
+   /* z-index: 1000;
+  position: fixed;
+  top:0; left:0;
+  width: 100%; 
+*/
+    z-index: 1000;
+position: fixed;
+top: 0px;
+margin-left: 0px;
+width: 1349px;
+left: 0px;
+}
 
 /* ==========================================================================
    General
@@ -369,7 +386,7 @@ body .neighborhood-b__poi {
 }
 
 body .map-a__cat-selected {
-    background-color: var(--contrast-2) !important;
+    /*background-color: var(--contrast-2) !important;*/
 }
 
 body .neighborhood-b__poi-category-item-title .tab-grid * {
