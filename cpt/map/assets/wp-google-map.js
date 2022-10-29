@@ -115,9 +115,9 @@ var map = {
         map.poiMarkers.forEach(function (e) {
             (e.category != map.currentCategory && map.currentCategory) || t.extend(e.position);
         }),
-            660 <= $(window).width()
+            310 <= $(window).width()
                 ? (map.instance.fitBounds(t), map.instance.setZoom(map.instance.getZoom()))
-                : $(window).width() < 660 &&
+                : $(window).width() < 310 &&
                   setTimeout(function () {
                       var e = new map.googleMap.LatLngBounds().extend(map.latlng);
                       map.instance.fitBounds(e), map.instance.setZoom(4 == neighborhoodSettings.layout ? map.instance.getZoom() - 10 : map.instance.getZoom() - 7);
@@ -144,10 +144,10 @@ var map = {
             this.poiMarkers.forEach(function (e) {
                 ((i && !mapSettings.loadAll) || !i) && e.setVisible(!1), (e.category == t || (i && mapSettings.loadAll) || "all" == t) && (o.extend(e.position), e.setVisible(!0));
             }),
-            (e && 660 <= $(window).width()) || 4 == neighborhoodSettings.layout)
+            (e && 310 <= $(window).width()) || 4 == neighborhoodSettings.layout)
         )
             this.instance.fitBounds(o), this.instance.setZoom(this.instance.getZoom());
-        else if ($(window).width() < 660) {
+        else if ($(window).width() < 310) {
             var a = new this.googleMap.LatLngBounds().extend(this.latlng);
             setTimeout(function () {
                 n.instance.fitBounds(a), n.instance.setZoom(n.instance.getZoom() - 7);
@@ -160,10 +160,10 @@ var map = {
             this.googleMap.event.addListener(n, "click", function () {
                 if (4 == neighborhoodSettings.layout) {
                     var e = $("[data-poi-id=" + n.id + "]"),
-                        t = o.$map.data("fixed") ? 0 : 600;
+                        t = o.$map.data("fixed") ? 0 : 309;
                     e.length && $("html, body").animate({ scrollTop: e.offset().top - o.$map.outerHeight() }, 200),
                         setTimeout(function () {
-                            o.openWindow.close(), o.openMarker(i, n);
+                           // o.openWindow.close(), o.openMarker(i, n);
                         }, t);
                 } else o.openWindow && o.openWindow.close(), o.openMarker(i, n);
             });
@@ -185,7 +185,7 @@ var map = {
     adjustPinpointPosition: function () {
         var e = 0,
             t = -1 * ($(".map__infobox-pinpoint-wrap").outerHeight() - 30);
-        $(".map__infobox").length && 680 <= $(window).width() && mapSettings.loadInfobox && (e = ($(".map__infobox").outerWidth() / 2.5) * -1), map.offsetCenter(map.latlng, e, t);
+        $(".map__infobox").length && 312 <= $(window).width() && mapSettings.loadInfobox && (e = ($(".map__infobox").outerWidth() / 2.5) * -1), map.offsetCenter(map.latlng, e, t);
     },
     bindControls: function () {
         var i = this;
@@ -201,7 +201,7 @@ var map = {
             e.preventDefault(), (i.currentCategory = $(this).data("poi")), (i.categoryChanged = !0), i.poiVisibility(i.currentCategory, !0);
         }),
             this.googleMap.event.addListener(i.instance, "click", function () {
-                mapSettings.persistPinpoint ? $(".map__infobox-modal").addClass("map__infobox-modal--pinpoint-only") : i.mainInfoBox.close(), i.openWindow && i.openWindow.close();
+              //  mapSettings.persistPinpoint ? $(".map__infobox-modal").addClass("map__infobox-modal--pinpoint-only") : i.mainInfoBox.close(), i.openWindow && i.openWindow.close();
             }),
             this.$zoomIn.unbind().click(function (e) {
                 e.preventDefault(), i.instance.setZoom(i.instance.getZoom() + i.zoomIncrement);
@@ -236,7 +236,7 @@ var map = {
             7 == theme && ($("#header").hasClass("header--sticky-desktop_only") || $("#header").hasClass("header--sticky-desktop_mobile"))
                 ? (t = o.$mapBodyWrap.offset().top - $("#header").outerHeight())
                 : 8 != theme || $("#header").hasClass("header--sticky-desktop_only") || $("#header").hasClass("header--sticky-desktop_mobile") || (t = o.$mapBodyWrap.offset().top + $("#header").outerHeight()),
-                (808 <= $(window).width() || 4 == neighborhoodSettings.layout) &&
+                (311 <= $(window).width() || 4 == neighborhoodSettings.layout) &&
                     (o.openWindow && o.openWindow.close(),
                     $("html, body").animate({ scrollTop: t }),
                     o.poiVisibility(n.category),
@@ -453,7 +453,7 @@ $(function () {
                                 e.$map.offset().top <= t.offset().top &&
                                 (e.$map.data("fixed", !1),
                                 e.$map.css({ position: "relative" }).removeClass("map-c__fixed"),
-                                808 < o(window).width() &&
+                                311 < o(window).width() &&
                                     setTimeout(function () {
                                         map.loadMap(!1, !0);
                                     }, 500),
@@ -462,7 +462,7 @@ $(function () {
                                     e.$map.offset().top - o(window).scrollTop() < 0 &&
                                     (e.$map.data("fixed", !0),
                                     e.$map.css({ position: "fixed", width: "100%", "z-index": 8900, top: 0 }).addClass("map-c__fixed"),
-                                    808 < o(window).width() &&
+                                    311 < o(window).width() &&
                                         setTimeout(function () {
                                             map.loadMap(!1, !0);
                                         }, 500),
@@ -707,7 +707,7 @@ $(function () {
             e.init();
         });
     })(jQuery);
-config = { siteUrl: config.siteUrl, mobileBreak: 808 };
+config = { siteUrl: config.siteUrl, mobileBreak: 311 };
 "function" == typeof WOW &&
     (config.wowInit =
         ((config.wow = new WOW()),
@@ -1000,7 +1000,7 @@ function InfoBox(e) {
                         this.eventListeners_.push(google.maps.event.addDomListener(this.div_, t[e], o));
                     this.eventListeners_.push(
                         google.maps.event.addDomListener(this.div_, "mouseover", function (e) {
-                            this.style.cursor = "default";
+                            this.style.cursor = "crosshair";
                         })
                     );
                 }
