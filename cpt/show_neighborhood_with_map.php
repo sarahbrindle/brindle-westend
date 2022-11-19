@@ -90,9 +90,6 @@
     $catNumberPin = $catNumber;
     $locationItemNumberPin = 10000;
     $icon_color = get_field('icon_color', 'option');
-    if($icon_color ==''){
-      $icon_color = '#FF6E6E';
-    }
     $locaTitlePin = get_field('company_name_for_map', 'option');
     $item_map_lat_longPin = get_field('map_center_for_map', 'option');
     $item_map_lat_long_arrayPin = explode(",",$item_map_lat_longPin);
